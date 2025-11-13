@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: motivation-app
+  labels:
+    app: motivation-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: motivation-app
+  template:
+    metadata:
+      labels:
+        app: motivation-app
+    spec:
+      containers:
+      - name: motivation-app
+        image: motivation-app:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
