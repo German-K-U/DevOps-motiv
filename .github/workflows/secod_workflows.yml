@@ -1,0 +1,21 @@
+name: 2dev work
+on: [push]
+
+jobs: 
+  run-first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display node version
+        run: node -v
+            
+  run-paralel-comad:
+    run-on: widows-latest
+    step:
+      - name: Display Node version
+        run: node -v
+  run-second-comad:
+    runs-on: macos-latest
+    needs: run-first-command
+    steps:
+      - name: Display Node version
+        run: node -v
