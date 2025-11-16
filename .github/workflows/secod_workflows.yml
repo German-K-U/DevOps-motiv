@@ -6,11 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display node version
-        run: node -v
-            
-  run-paralel-comad:
-    run-on: widows-latest
-    step:
-      - name: Display Node version
-        run: node -v
+        run: |
+          node -v
+          npm -v 
   
