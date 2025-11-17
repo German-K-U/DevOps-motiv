@@ -1,4 +1,4 @@
-name: dev work
+name: 3dev work
 on: [push]
 
 jobs: 
