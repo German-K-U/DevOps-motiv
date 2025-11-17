@@ -11,3 +11,6 @@ jobs:
         run: |
           pwd
           ls -a  
+      - uses: actions/checkout@v4
+      - name: done
+        run: ls -a

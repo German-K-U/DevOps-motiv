@@ -6,8 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display some text
-        run: echo "Some Text"
+        run: echo "This is done!"
       - name: command in multitul
         run: |
           node -v
           npm -v  
+      - uses: actions/checkout@v4
