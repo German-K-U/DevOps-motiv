@@ -11,6 +11,12 @@ jobs:
         run: |
           pwd
           ls -a  
-      - uses: actions/checkout@v4
+     # - uses: actions/checkout@v4
+      - name: copy
+        run: |
+          git init
+          git remote add origin "https://@GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}github.com/$GITHUB_REPOSITORY.git"
+          git fetchh origin
+          git checkout main
       - name: done
         run: ls -a
